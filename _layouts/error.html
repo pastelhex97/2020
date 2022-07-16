@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123712244-11"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123712244-11');
+</script>
+        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="og:image" content="{{ site.logo }}">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="title" content="{{ site.title }}">
+    <meta name="keywords" content="web developer, web designer, front end developer, pastelhex">
+    <meta name="author" content="{{ site.author_name }}">
+    <meta name="twitter" content="{{ site.username }}">
+    <meta name="github" content="{{ site.username }}">
+
+    <title>{{ site.title }} – {{ page.title }}</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+   
+    <link href="/2020/index.css" rel="stylesheet">
+    <link href="cssreset.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon }}">
+
+    </head>
+  
+<body style="margin-top:34px!important;">
+  
+<div style="position:fixed; top:0; width:100%; background:rgba(244, 236, 230,1); padding:10px 5px; z-index:10000000000; text-align:center;"><a href="https://pastelhex.online" target="_blank" style="color:#4C785D!important;text-decoration:none!important;cursor:pointer!important;font-family: sans-serif !important;font-size: 16px;">Visit my newest portfolio ➞</a></div>
+
+<div id="top">
+
+<div id="status">
+        {% include logo.html %}
+
+    </div>
+
+    <div id="about">
+        <div id="title"><h1>pastelhex</h1></div>
+        
+        <div class="stuff">
+      
+        {{content}}
+          
+       </div>
+    </div>
+
+</div>
+
+    {% include links.html %}
+    {% include footer.html %}
+
+</body>
+</html>

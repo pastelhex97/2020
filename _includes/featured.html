@@ -1,0 +1,38 @@
+<div id="links" class="portfolio">
+	
+
+	{% for post in site.posts %}
+    {% if post.featured == "yes" %}
+       <!-- <div class="header">
+            <p class="date">{{ post.category }}</p>-->
+
+{% if post.external != "yes" %}
+            <a href="{{ site.url }}/2020{{ post.url }}" class="post">
+               
+                    {% else %}
+            <a href="{{ post.link }}" rel="noopener" target="_blank" class="post">
+                
+            
+             {% endif %}    
+
+             <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+
+      <img src="{{ site.url }}/img/{{ post.img }}" class="img-fluid" alt="Screenshot of {{ post.title }}">
+    </div>
+    <div class="flip-box-back">
+      <p class="title">{{ post.title }}</p>
+      <p class="date">{{ post.projectDate }}</p>
+      <p class="excerpt" style="text-align:left;">{{ post.excerpt }}</p>
+    </div>
+  </div>
+</div> 
+
+</a>
+                    
+            
+{% endif %}
+    {% endfor %}
+	
+</div>
